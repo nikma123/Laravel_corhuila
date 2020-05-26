@@ -1,6 +1,6 @@
 @extends("theme/principal")
 @section('titulo')
-Listado Menu
+Listado Herramientas
 @endsection
 @section('contenido')
 @if (session('status'))
