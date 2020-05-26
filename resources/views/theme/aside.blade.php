@@ -107,7 +107,7 @@
         </li>
         <li class="nav-item">
           <a href="{{route('agregar-calibracion')}}" class="nav-link">
-            <i class="nav-icon far fa-circle text-info"></i>
+            <i class="nav-icon far fa-circle text-danger"></i>
             <p>{{'Calibracion'}}</p>
           </a>
         </li>

@@ -13,7 +13,7 @@ Registro de Proveedores
         <div class="card-header">
             <h4>Registro de nuevo Proveedor</h4>
         </div>
-        <form action="{{url('/Proveedor') }}" method="POST">
+        <form action="{{url('/proveedor') }}" method="POST">
             {{ csrf_field() }}
             <div class="card-body">
                 <div class="row">

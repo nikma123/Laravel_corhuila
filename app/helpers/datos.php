@@ -1,14 +1,18 @@
 <?php
 
 use App\herramientas;
-use App\Menu;
-
+use App\Proveedor\Proveedor;
 
 
 
 function herramientas()
 {
-    $listadoMenu = herramientas::all();
-    return $listadoMenu;
+    $listadoHerramientas = herramientas::all();
+    return $listadoHerramientas;
+}
+function proveedores()
+{
+    $listadoProveedor = proveedor::all();
+    return $listadoProveedor;
 }
 

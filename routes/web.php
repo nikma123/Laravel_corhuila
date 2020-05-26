@@ -34,12 +34,12 @@ Route::view('agrHerramienta', 'Herramientas.agregar');
 
 
 //Rutas para trabajar con proveedores
-Route::get('verPro', 'ProveedorController@index')->name('ver-proveedor');
-Route::get('agrPro', 'ProveedorController@create')->name('agregar-proveedor');
-Route::resource('proveedor', 'ProveedorController');
+Route::get('verPro', 'proveedor\Provedores@index')->name('ver-proveedor');
+Route::get('agrPro', 'proveedor\Provedores@create')->name('agregar-proveedor');
+Route::resource('proveedor', 'proveedor\Provedores');
 //Para pasar mensaje a la vista
-Route::view('delPro', 'proveedor.ver');
-Route::view('agrproveedor', 'proveedor.agregar');
+Route::view('delProv', 'proveedor.ver');
+Route::view('agrProveedor', 'proveedor.agregar');
 
 
 
