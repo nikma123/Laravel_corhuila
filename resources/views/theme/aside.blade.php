@@ -100,7 +100,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a href="{{route('agregar-trabajadores')}}" class="nav-link">
             <i class="nav-icon far fa-circle text-info"></i>
             <p>{{'Trabajadores'}}</p>
           </a>

@@ -33,8 +33,17 @@ Route::view('agrHerramienta', 'Herramientas.agregar');
 //Rutas para trabajar con proveedores
 Route::get('verPro', 'Proveedor\ProveedorController@index')->name('ver-proveedor');
 Route::get('agrPro', 'Proveedor\ProveedorController@create')->name('agregar-proveedor');
-Route::resource('proveedor', 'Proveedor\ProveedorController');
+Route::resource('proveedor', 'Proveedor\proveedorController');
 
 //Para pasar mensaje a la vista
 Route::view('delPro', 'proveedor.ver');
 Route::view('agrProveedor', 'proveedor.agregar');
+
+//Rutas para trabajar con Trabajadores
+Route::get('verTra', 'Trabajadores\TrabajadoresController@index')->name('ver-trabajadores');
+Route::get('agrTra', 'Trabajadores\TrabajadoresController@create')->name('agregar-trabajadores');
+Route::resource('trabajadores', 'Trabajadores\TrabajadoresController');
+
+//Para pasar mensaje a la vista
+Route::view('delTra', 'Trabajadores.ver');
+Route::view('agrtrabajadores', 'Trabajadores.agregar');

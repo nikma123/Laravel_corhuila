@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\proveedor;
-use App\Http\Controllers\Controller;
+use App\trabajadores;
 use Illuminate\Http\Request;
 
-class ProveedorController extends Controller
+class TrabajadoresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class ProveedorController extends Controller
      */
     public function index()
     {
-        return view('proveedor.ver');
+        return view('trabajadores.ver');
     }
 
     /**
@@ -25,7 +24,7 @@ class ProveedorController extends Controller
      */
     public function create()
     {
-        return view('proveedor.agregar');
+        return view('trabajadores.agregar');
     }
 
     /**
@@ -36,18 +35,18 @@ class ProveedorController extends Controller
      */
     public function store(Request $request)
     {
-        $agrearProveedor= request()->except('_token');
-        proveedor::insert($agrearProveedor);
-        return redirect('agrProveedor')->with('status','Proveedor  registrada con exito');
+        $agrearTrabajadores= request()->except('_token');
+        trabajadores::insert($agrearTrabajadores);
+        return redirect('agrHerramienta')->with('status','trabajador registrada con exito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
-    public function show(proveedor $proveedor)
+    public function show($id)
     {
         //
     }
@@ -55,10 +54,10 @@ class ProveedorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
-    public function edit(proveedor $proveedor)
+    public function edit($id)
     {
         //
     }
@@ -67,10 +66,10 @@ class ProveedorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, proveedor $proveedor)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -78,12 +77,12 @@ class ProveedorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        proveedor::destroy($id);
-        return redirect('delPro')->with('status','Se elimino con exito');
+        trabajadores::destroy($id);
+        return redirect('delHer')->with('status','Se elimino con exito');
     }
 }

@@ -1,6 +1,6 @@
 @extends("theme/principal")
 @section('titulo')
-Registro de Herramientas
+Registro de Proveedores
 @endsection
 @section('contenido')
 <div class="container">
