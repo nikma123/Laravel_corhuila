@@ -51,3 +51,14 @@ Route::resource('trabajadores', 'TrabajadoresController');
 //Para pasar mensaje a la vista
 Route::view('delTra', 'Trabajadores.ver');
 Route::view('agrTrabajadores', 'Trabajadores.agregar');
+
+
+
+
+//Rutas para trabajar con Calibracion
+Route::get('verCal', 'CalibracionController@index')->name('ver-calibracion');
+Route::get('agrCal', 'CalibracionController@create')->name('agregar-calibracion');
+Route::resource('calibracion', 'CalibracionController');
+//Para pasar mensaje a la vista
+Route::view('delCal', 'Calibracion.ver');
+Route::view('agrCalibracion', 'Calibracion.agregar');

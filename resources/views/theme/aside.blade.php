@@ -60,7 +60,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link">
+              <a href="{{ route('ver-calibracion') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{'Ver calibradas'}}</p>
               </a>
@@ -106,7 +106,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a href="{{route('agregar-calibracion')}}" class="nav-link">
             <i class="nav-icon far fa-circle text-info"></i>
             <p>{{'Calibracion'}}</p>
           </a>

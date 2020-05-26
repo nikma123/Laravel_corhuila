@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Proveedor\Proveedor;
+use App\Calibracion\Calibracion;
 use Illuminate\Http\Request;
 
-class ProveedorController extends Controller
+class CalibracionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ProveedorController extends Controller
      */
     public function index()
     {
-        return view('proveedor.ver');
+        return view('Calibracion.ver');
     }
 
     /**
@@ -24,7 +24,7 @@ class ProveedorController extends Controller
      */
     public function create()
     {
-        return view('proveedor.agregar');
+        return view('Calibracion.agregar');
     }
 
     /**
@@ -35,18 +35,18 @@ class ProveedorController extends Controller
      */
     public function store(Request $request)
     {
-        $agrearProveedor= request()->except('_token');
-        Proveedor::insert($agrearProveedor);
-        return redirect('agrproveedor')->with('status','Proveedor  registrada con exito');
+        $agrearCalibracion= request()->except('_token');
+        Proveedor::insert($agrearCalibracion);
+        return redirect('agrcalibracion')->with('status','calibracion  registrada con exito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Proveedor\Proveedor  $proveedor
+     * @param  \App\Calibracion\Calibracion  $calibracion
      * @return \Illuminate\Http\Response
      */
-    public function show(Proveedor $proveedor)
+    public function show(Calibracion $calibracion)
     {
         //
     }
@@ -54,10 +54,10 @@ class ProveedorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Proveedor\Proveedor  $proveedor
+     * @param  \App\Calibracion\Calibracion  $calibracion
      * @return \Illuminate\Http\Response
      */
-    public function edit(Proveedor $proveedor)
+    public function edit(Calibracion $calibracion)
     {
         //
     }
@@ -66,10 +66,10 @@ class ProveedorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Proveedor\Proveedor  $proveedor
+     * @param  \App\Calibracion\Calibracion  $calibracion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Proveedor $proveedor)
+    public function update(Request $request, Calibracion $calibracion)
     {
         //
     }
@@ -77,12 +77,12 @@ class ProveedorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Proveedor\Proveedor  $proveedor
+     * @param  \App\Calibracion\Calibracion  $calibracion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Proveedor $proveedor)
+    public function destroy($id)
     {
         Proveedor::destroy($id);
-        return redirect('delPro')->with('status','Se elimino con exito');
+        return redirect('delCal')->with('status','Se elimino con exito');
     }
 }
