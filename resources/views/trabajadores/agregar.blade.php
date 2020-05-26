@@ -29,7 +29,7 @@ Registro de Trabajador
                         <div class="form-group">
                             <label for="cedula"><i class="fa fa-list-ol" aria-hidden="true"></i><b> {{' No. Cedula '}}
                                 </b></label>
-                            <input class="form-control" type="text" name="cedula" id="cedula" value=""
+                            <input class="form-control" type="number" name="cedula" id="cedula" value=""
                                 placeholder="CC.">
                         </div>
                     </div>
@@ -39,14 +39,6 @@ Registro de Trabajador
                                 </b></label>
                             <input class="form-control" type="text" name="direccion" id="direccion" value=""
                                 placeholder="Direccion">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="nombre"><i class="fa fa-address-card"
-                                    aria-hidden="true"></i><b>{{' Cantidad '}}</b></label>
-                            <input class="form-control" type="number" id="cantidad" name="cantidad" value=""
-                                placeholder="Nombre de menu">
                         </div>
                     </div>
                     <div class="col-md-4 ml-auto">
@@ -62,7 +54,7 @@ Registro de Trabajador
                             <label for="area"><i class="fa fa-list-ol" aria-hidden="true"></i><b>
                                     {{' Area De Trabajo '}} </b></label>
                             <input class="form-control" type="text" name="area" id="area" value=""
-                                placeholder="Telefono">
+                                placeholder="Area de trabajo">
                         </div>
                     </div>
                     <div class="col-md-4 ml-auto">
@@ -75,9 +67,9 @@ Registro de Trabajador
                     </div>
                     <div class="col-md-4 ml-auto">
                         <div class="form-group">
-                            <label for="fechaRetiro"><i class="fa fa-list-ol" aria-hidden="true"></i><b>
+                            <label for="fechaSalida"><i class="fa fa-list-ol" aria-hidden="true"></i><b>
                                     {{' Fecha Retiro '}} </b></label>
-                            <input class="form-control" type="date" name="fechaRetiro" id="fechaRetiro" value=""
+                            <input class="form-control" type="date" name="fechaSalida" id="fechaSalida" value=""
                                 placeholder="Cantidad a registrar">
                         </div>
                     </div>

@@ -79,7 +79,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link">
+              <a href="{{ route('ver-trabajadores') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{' Ver trabajadores'}}</p>
               </a>
@@ -103,6 +103,12 @@
           <a href="{{route('agregar-trabajadores')}}" class="nav-link">
             <i class="nav-icon far fa-circle text-info"></i>
             <p>{{'Trabajadores'}}</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">
+            <i class="nav-icon far fa-circle text-info"></i>
+            <p>{{'Calibracion'}}</p>
           </a>
         </li>
       </ul>

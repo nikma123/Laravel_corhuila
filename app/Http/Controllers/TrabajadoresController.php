@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\trabajadores;
+use App\Trabajador\Trabajadores;
 use Illuminate\Http\Request;
 
 class TrabajadoresController extends Controller
@@ -37,16 +37,16 @@ class TrabajadoresController extends Controller
     {
         $agrearTrabajadores= request()->except('_token');
         trabajadores::insert($agrearTrabajadores);
-        return redirect('agrHerramienta')->with('status','trabajador registrada con exito');
+        return redirect('agrTrabajadores')->with('status','Trabajador  registrada con exito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\trabajadores  $trabajadores
+     * @param  \App\Trabajador\Trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Trabajadores $trabajadores)
     {
         //
     }
@@ -54,10 +54,10 @@ class TrabajadoresController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\trabajadores  $trabajadores
+     * @param  \App\Trabajador\Trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Trabajadores $trabajadores)
     {
         //
     }
@@ -66,10 +66,10 @@ class TrabajadoresController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\trabajadores  $trabajadores
+     * @param  \App\Trabajador\Trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Trabajadores $trabajadores)
     {
         //
     }
@@ -77,12 +77,12 @@ class TrabajadoresController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\trabajadores  $trabajadores
+     * @param  \App\Trabajador\Trabajadores  $trabajadores
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Trabajadores $trabajadores)
     {
-        trabajadores::destroy($id);
-        return redirect('delHer')->with('status','Se elimino con exito');
+        trabajador::destroy($id);
+        return redirect('delTra')->with('status','Se elimino con exito');
     }
 }

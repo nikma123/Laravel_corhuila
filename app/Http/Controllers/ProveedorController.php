@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\proveedor;
-use App\Http\Controllers\Controller;
+use App\Proveedor\Proveedor;
 use Illuminate\Http\Request;
 
 class ProveedorController extends Controller
@@ -37,17 +36,17 @@ class ProveedorController extends Controller
     public function store(Request $request)
     {
         $agrearProveedor= request()->except('_token');
-        proveedor::insert($agrearProveedor);
-        return redirect('agrProveedor')->with('status','Proveedor  registrada con exito');
+        Proveedor::insert($agrearProveedor);
+        return redirect('agrproveedor')->with('status','Proveedor  registrada con exito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\Proveedor\Proveedor  $proveedor
      * @return \Illuminate\Http\Response
      */
-    public function show(proveedor $proveedor)
+    public function show(Proveedor $proveedor)
     {
         //
     }
@@ -55,10 +54,10 @@ class ProveedorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\Proveedor\Proveedor  $proveedor
      * @return \Illuminate\Http\Response
      */
-    public function edit(proveedor $proveedor)
+    public function edit(Proveedor $proveedor)
     {
         //
     }
@@ -67,10 +66,10 @@ class ProveedorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\Proveedor\Proveedor  $proveedor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, proveedor $proveedor)
+    public function update(Request $request, Proveedor $proveedor)
     {
         //
     }
@@ -78,12 +77,12 @@ class ProveedorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\proveedor  $proveedor
+     * @param  \App\Proveedor\Proveedor  $proveedor
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Proveedor $proveedor)
     {
-        proveedor::destroy($id);
-        return redirect('delPro')->with('status','Se elimino con exito');
+        Proveedor::destroy($id);
+        return redirect('delTra')->with('status','Se elimino con exito');
     }
 }
