@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\trabajador;
 
-use App\Trabajador\Trabajadores;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Trabajador\Trabajadores;
 
 class TrabajadoresController extends Controller
 {
@@ -43,10 +44,10 @@ class TrabajadoresController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Trabajador\Trabajadores  $trabajadores
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Trabajadores $trabajadores)
+    public function show($id)
     {
         //
     }
@@ -54,10 +55,10 @@ class TrabajadoresController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Trabajador\Trabajadores  $trabajadores
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Trabajadores $trabajadores)
+    public function edit($id)
     {
         //
     }
@@ -66,10 +67,10 @@ class TrabajadoresController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Trabajador\Trabajadores  $trabajadores
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Trabajadores $trabajadores)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,12 +78,13 @@ class TrabajadoresController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Trabajador\Trabajadores  $trabajadores
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Trabajadores $trabajadores)
+    public function destroy($id)
     {
-        trabajador::destroy($id);
-        return redirect('delTra')->with('status','Se elimino con exito');
+        
+        Trabajadores::destroy($id);
+        return redirect('deltrab')->with('status','Se elimino con exito');
     }
 }

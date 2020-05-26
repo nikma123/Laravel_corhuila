@@ -45,11 +45,11 @@ Route::view('agrProveedor', 'proveedor.agregar');
 
 
 //Rutas para trabajar con Trabajadores
-Route::get('verTra', 'TrabajadoresController@index')->name('ver-trabajadores');
-Route::get('agrTra', 'TrabajadoresController@create')->name('agregar-trabajadores');
-Route::resource('trabajadores', 'TrabajadoresController');
+Route::get('verTra', 'trabajador\TrabajadoresController@index')->name('ver-trabajadores');
+Route::get('agrTra', 'trabajador\TrabajadoresController@create')->name('agregar-trabajadores');
+Route::resource('trabajadores', 'trabajador\TrabajadoresController');
 //Para pasar mensaje a la vista
-Route::view('delTra', 'Trabajadores.ver');
+Route::view('deltrab', 'Trabajadores.ver');
 Route::view('agrTrabajadores', 'Trabajadores.agregar');
 
 

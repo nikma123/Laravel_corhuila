@@ -1,6 +1,6 @@
 @extends("theme/principal")
 @section('titulo')
-Listado Menu
+Listado trabajadores
 @endsection
 @section('contenido')
 @if (session('status'))
@@ -11,7 +11,7 @@ Listado Menu
 <div>
   <div class="card card-success">
     <div class="card-header">
-      <h3 class="card-title">Listado de Empleados</h3>
+      <h3 class="card-title">Listado de Trabajadores</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body p-0">
@@ -26,21 +26,22 @@ Listado Menu
             <th>Area de Trabajo</th>
             <th>Fecha Ingreso</th>
             <th>Fecha Retiro</th>
+            <th class="text-info">Evento</th>
           </tr>
         </thead>
         <tbody>
-          @foreach(herramientas() as $her)
+          @foreach(trabajadores() as $trabj)
           <tr>
-            <td>{{$her->id}}</td>
-            <td>{{$her->nombre}}</td>
-            <td>{{$her->cedula}}</td>
-            <td>{{$her->direccion}}</td>
-            <td>{{$her->telefono}}</td>
-            <td>{{$her->area}}</td>
-            <td>{{$her->fechaIngreso}}</td>
-            <td>{{$her->fechaSalida}}</td>
+            <td>{{$trabj->id}}</td>
+            <td>{{$trabj->nombre}}</td>
+            <td>{{$trabj->cedula}}</td>
+            <td>{{$trabj->direccion}}</td>
+            <td>{{$trabj->telefono}}</td>
+            <td>{{$trabj->area}}</td>
+            <td>{{$trabj->fechaIngreso}}</td>
+            <td>{{$trabj->fechaSalida}}</td>
             <td>
-              <form action="{{url('/herremientas',$her->id) }}" method="POST">
+              <form action="{{url('/trabajadores',$trabj->id) }}" method="POST">
                 {{ csrf_field() }}
                 {{method_field('DELETE')}}
                 <button class="btn btn-primary" type="submit" onclick="return confirm('Borrar')">Borrar</button>
