@@ -15,6 +15,13 @@ class CreateHerramientasTable extends Migration
     {
         Schema::create('herramientas', function (Blueprint $table) {
             $table->id();
+            $table->String('mrcEquipo');
+            $table->String('mod');
+            $table->String('NoSerie');
+            $table->integer('cantidad');
+            $table->integer('costUnidad');
+            $table->date('fechaIngreso');
+            $table->integer('estado');
             $table->timestamps();
         });
     }

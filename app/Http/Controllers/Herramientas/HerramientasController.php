@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Herramientas;
 
 use App\herramientas;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class HerramientasController extends Controller
@@ -14,7 +15,7 @@ class HerramientasController extends Controller
      */
     public function index()
     {
-        //
+        return view('Herramientas.ver');
     }
 
     /**
@@ -24,7 +25,7 @@ class HerramientasController extends Controller
      */
     public function create()
     {
-        //
+        return view('Herramientas.agregar');
     }
 
     /**
@@ -35,16 +36,18 @@ class HerramientasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $agrearHerramienta= request()->except('_token');
+        herramientas::insert($agrearHerramienta);
+        return redirect('agrHerramienta')->with('status','Herramienta  registrada con exito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\herramientas  $herramientas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(herramientas $herramientas)
+    public function show($id)
     {
         //
     }
@@ -52,10 +55,10 @@ class HerramientasController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\herramientas  $herramientas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(herramientas $herramientas)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +67,10 @@ class HerramientasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\herramientas  $herramientas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update( )
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,11 +78,12 @@ class HerramientasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\herramientas  $herramientas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(herramientas $herramientas)
+    public function destroy($id)
     {
-        //
+        herramientas::destroy($id);
+        return redirect('delHer')->with('status','Se elimino con exito');
     }
 }

@@ -24,7 +24,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link">
+              <a href="{{ route('ver-herramienta') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{'Ver registradas'}}</p>
               </a>
@@ -87,7 +87,7 @@
         </li>
         <li class="nav-header">NUEVO REGISTRO</li>
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a href="{{route('agregar-herramienta')}}" class="nav-link">
             <i class="nav-icon far fa-circle text-success"></i>
             <p class="text">{{'Herramientas'}}</p>
           </a>
