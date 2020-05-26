@@ -28,3 +28,13 @@ Route::resource('herremientas', 'Herramientas\HerramientasController'); //Para l
 //Para pasar mensaje a la vista
 Route::view('delHer', 'Herramientas.ver');
 Route::view('agrHerramienta', 'Herramientas.agregar');
+
+
+//Rutas para trabajar con proveedores
+Route::get('verPro', 'Proveedor\ProveedorController@index')->name('ver-proveedor');
+Route::get('agrPro', 'Proveedor\ProveedorController@create')->name('agregar-proveedor');
+Route::resource('proveedor', 'Proveedor\ProveedorController');
+
+//Para pasar mensaje a la vista
+Route::view('delPro', 'proveedor.ver');
+Route::view('agrProveedor', 'proveedor.agregar');
