@@ -15,6 +15,7 @@ Editar Proveedores
         </div>
         <form action="{{url('/proveedor/'.$proveedor->id)}}" method="POST">
             {{ csrf_field() }}
+            {{ method_field('PATCH') }}
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-4">
