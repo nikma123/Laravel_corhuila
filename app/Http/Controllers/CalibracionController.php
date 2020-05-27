@@ -36,7 +36,7 @@ class CalibracionController extends Controller
     public function store(Request $request)
     {
         $agrearCalibracion= request()->except('_token');
-        Proveedor::insert($agrearCalibracion);
+        calibracion::insert($agrearCalibracion);
         return redirect('agrcalibracion')->with('status','calibracion  registrada con exito');
     }
 

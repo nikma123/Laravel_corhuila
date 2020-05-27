@@ -1,6 +1,6 @@
 @extends("theme/principal")
 @section('titulo')
-Registro de Calibracion
+Editar de Calibracion
 @endsection
 @section('contenido')
 <div class="container">
@@ -13,7 +13,7 @@ Registro de Calibracion
         <div class="card-header">
             <h4>Registro de nueva Calibracion</h4>
         </div>
-        <form action="{{url('/calibracion') }}" method="POST">
+        <form action="{{url('/herremientas') }}" method="POST">
             {{ csrf_field() }}
             <div class="card-body">
                 <div class="row">
@@ -30,7 +30,7 @@ Registro de Calibracion
                             <label for="tiempo"><i class="fa fa-list-ol" aria-hidden="true"></i><b> {{' Tiempo Aproximado '}}
                                 </b></label>
                             <input class="form-control" type="number" name="tiempo" id="tiempo" value=""
-                                placeholder="tiempo aproximado">
+                                placeholder="Cantidad a registrar">
                         </div>
                     </div>
                     <div class="col-md-4 ml-auto">
@@ -38,7 +38,7 @@ Registro de Calibracion
                             <label for="costo"><i class="fa fa-list-ol" aria-hidden="true"></i><b> {{' Costo '}}
                                 </b></label>
                             <input class="form-control" type="number" name="costo" id="costo" value=""
-                                placeholder="Costo">
+                                placeholder="Cantidad a registrar">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -46,7 +46,7 @@ Registro de Calibracion
                             <label for="serial"><i class="fa fa-address-card"
                                     aria-hidden="true"></i><b>{{' No. serial '}}</b></label>
                             <input class="form-control" type="number" id="serial" name="serial" value=""
-                                placeholder="numero de serial">
+                                placeholder="Nombre de menu">
                         </div>
                     </div>
                     <div class="col-md-4 ml-auto">
@@ -54,7 +54,7 @@ Registro de Calibracion
                             <label for="numero"><i class="fa fa-list-ol" aria-hidden="true"></i><b>
                                     {{' No. certifiaco calibracion '}} </b></label>
                             <input class="form-control" type="number" name="numero" id="numero" value=""
-                                placeholder="numero de certificado">
+                                placeholder="Cantidad a registrar">
                         </div>
                     </div>
                     <div class="col-md-4 ml-auto">
@@ -62,7 +62,7 @@ Registro de Calibracion
                             <label for="fechaIngreso"><i class="fa fa-list-ol" aria-hidden="true"></i><b>
                                     {{' Fecha del certificado '}} </b></label>
                             <input class="form-control" type="date" name="fechaIngreso" id="fechaIngreso" value=""
-                                placeholder="Fecha de certificado">
+                                placeholder="Cantidad a registrar">
                         </div>
                     </div>
                     <div class="col-md-4 ml-auto">
@@ -70,13 +70,13 @@ Registro de Calibracion
                             <label for="fechaSalida"><i class="fa fa-list-ol" aria-hidden="true"></i><b>
                                     {{' Fecha de vencimiento'}} </b></label>
                             <input class="form-control" type="date" name="fechaSalida" id="fechaSalida" value=""
-                                placeholder="Fecha vencimiento">
+                                placeholder="Cantidad a registrar">
                         </div>
                     </div>
                    
                 </div>
             </div>
-            <button type="submit" class='btn btn-primary ml-2 mb-2'>Guardar</button>
+            <button type="submit" class='btn btn-primary ml-2 mb-2'>Editar</button>
     </div>
     </form>
 </div>

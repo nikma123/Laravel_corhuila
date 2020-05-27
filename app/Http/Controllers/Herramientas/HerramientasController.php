@@ -60,7 +60,8 @@ class HerramientasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $herramientas=herramientas::findOrFail($id);
+        return view('Herramientas.edit', compact('herramientas'));
     }
 
     /**
@@ -72,7 +73,11 @@ class HerramientasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $agrearHerramienta= request()->except(['_token','_method']);
+        herramientas::where('id','=',$id)->update($agrearHerramienta);
+
+        $herramientas=herramientas::findOrFail($id);
+        return view('Herramientas.ver');
     }
 
     /**

@@ -4,6 +4,7 @@ use App\herramientas;
 use App\informacion;
 use App\Proveedor\Proveedor;
 use App\Trabajador\Trabajadores;
+use App\Calibracion\calibracion;
 
 
 function herramientas()
@@ -25,5 +26,10 @@ function informacion()
 {
     $listadoInformacion = informacion::all();
     return $listadoInformacion;
+}
+function calibracion()
+{
+    $listadoCalibracion = Calibracion::all();
+    return $listadoCalibracion;
 }
 

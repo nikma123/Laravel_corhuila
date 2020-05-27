@@ -47,6 +47,11 @@ Listado trabajadores
                 <button class="btn btn-primary" type="submit" onclick="return confirm('Borrar')">Borrar</button>
               </form>
             </td>
+            <td>
+                <form action="{{url('/trabajadores/'.$trabj->id.'/edit') }}" method="">
+                  <button class="btn btn-primary" type="submit" >Editar</button>
+                </form>
+              </td>   
           </tr>
           @endforeach
         </tbody>

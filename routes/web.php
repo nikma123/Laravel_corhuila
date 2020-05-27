@@ -12,9 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return View('auth.login');
 });
 
 Auth::routes();
@@ -61,7 +60,7 @@ Route::get('agdCal', 'CalibracionController@create')->name('calibracion');
 Route::resource('calibracion', 'CalibracionController');
 //Para pasar mensaje a la vista
 Route::view('delCal', 'Calibracion.ver');
-Route::view('agrCalibracion', 'Calibracion.agregar');
+Route::view('agrcalibracion', 'Calibracion.agregar');
 
 //Ruta para la informacion de las herramientas 
 Route::resource('info', 'informacion\InformacionController');

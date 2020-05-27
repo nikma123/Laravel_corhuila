@@ -37,7 +37,7 @@ class Provedores extends Controller
     public function store(Request $request)
     {
         $agrearProveedor= request()->except('_token');
-        Proveedor::insert($agrearProveedor);
+        proveedor::insert($agrearProveedor);
         return redirect('agrProveedor')->with('status','Proveedor  registrad@ con exito');
     }
 
@@ -60,7 +60,8 @@ class Provedores extends Controller
      */
     public function edit($id)
     {
-        //
+        $proveedor=Proveedor::findOrFail($id);
+        return view('proveedor.edit', compact('proveedor'));
     }
 
     /**
@@ -72,7 +73,11 @@ class Provedores extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $agrearProveedor= request()->except(['_token','_method']);
+        Proveedor::where('id','=',$id)->update($agrearProveedor);
+
+        $proveedor=Proveedor::findOrFail($id);
+        return view('proveedor.ver');
     }
 
     /**

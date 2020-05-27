@@ -60,7 +60,8 @@ class TrabajadoresController extends Controller
      */
     public function edit($id)
     {
-        //
+        $trabajadores=trabajadores::findOrFail($id);
+        return view('trabajadores.edit', compact('trabajadores'));
     }
 
     /**
@@ -72,7 +73,11 @@ class TrabajadoresController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $agrearTrabajadores= request()->except(['_token','_method']);
+        trabajadores::where('id','=',$id)->update($agrearTrabajadores);
+
+        $trabajadores=trabajadores::findOrFail($id);
+        return view('trabajadores.ver');
     }
 
     /**
