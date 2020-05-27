@@ -1,6 +1,7 @@
 <?php
 
 use App\herramientas;
+use App\informacion;
 use App\Proveedor\Proveedor;
 use App\Trabajador\Trabajadores;
 
@@ -19,5 +20,10 @@ function trabajadores()
 {
     $listadoTrabajor = Trabajadores::all();
     return $listadoTrabajor;
+}
+function informacion()
+{
+    $listadoInformacion = informacion::all();
+    return $listadoInformacion;
 }
 

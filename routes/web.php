@@ -57,8 +57,17 @@ Route::view('agrTrabajadores', 'Trabajadores.agregar');
 
 //Rutas para trabajar con Calibracion
 Route::get('verCal', 'CalibracionController@index')->name('ver-calibracion');
-Route::get('agrCal', 'CalibracionController@create')->name('agregar-calibracion');
+Route::get('agdCal', 'CalibracionController@create')->name('calibracion');
 Route::resource('calibracion', 'CalibracionController');
 //Para pasar mensaje a la vista
 Route::view('delCal', 'Calibracion.ver');
 Route::view('agrCalibracion', 'Calibracion.agregar');
+
+//Ruta para la informacion de las herramientas 
+Route::resource('info', 'informacion\InformacionController');
+
+Route::get('verInf', 'informacion\InformacionController@index')->name('ver-info');
+Route::get('agrCal', 'informacion\InformacionController@create')->name('agregar-informacion');
+
+
+Route::view('masInfo', 'informacion.ver');

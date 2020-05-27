@@ -6,6 +6,9 @@
     <li class="nav-item d-none d-sm-inline-block">
       <a href="/home" class="nav-link">Inicio</a>
     </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="{{ route('ver-info') }}" class="nav-link"><strong>{{'Informacion Herramientas'}}</strong></a>
+    </li>
   </ul>
   <ul class="navbar-nav ml-auto">
     @guest<li class="nav-item">
