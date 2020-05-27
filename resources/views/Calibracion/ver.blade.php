@@ -20,7 +20,6 @@ Listado Calibracion
           <thead>
             <tr>
               <th style="width: 10px">#</th>
-              <th>ID</th>
               <th>Descripcion</th>
               <th>tiempo </th>
               <th>Costo</th>

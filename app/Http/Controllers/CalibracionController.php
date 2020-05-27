@@ -57,9 +57,10 @@ class CalibracionController extends Controller
      * @param  \App\Calibracion\Calibracion  $calibracion
      * @return \Illuminate\Http\Response
      */
-    public function edit(Calibracion $calibracion)
+    public function edit(Calibracion $id)
     {
-        //
+        $calibracion=calibracion::findOrFail($id);
+        return view('Calibracion.edit', compact('calibracion'));
     }
 
     /**
@@ -69,9 +70,13 @@ class CalibracionController extends Controller
      * @param  \App\Calibracion\Calibracion  $calibracion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Calibracion $calibracion)
+    public function update(Request $request, $id)
     {
-        //
+        $agrearCalibracion= request()->except(['_token','_method']);
+        calibracion::where('id','=',$id)->update($agrearCalibracion);
+
+        $trabajadores=trabajadores::findOrFail($id);
+        return view('Calibracion.ver');
     }
 
     /**
