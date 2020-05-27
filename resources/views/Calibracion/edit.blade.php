@@ -22,7 +22,7 @@ Editar de Calibracion
                         <div class="form-group">
                             <label for="descripcion"><i class="fa fa-address-card"
                                     aria-hidden="true"></i><b>{{' Descripcion Calibracion '}}</b></label>
-                            <input class="form-control" type="text" id="descripcion" name="descripcion" value="{{$calibracion->descipcion}}"
+                            <input class="form-control" type="text" id="descripcion" name="descripcion" value="{{$calibracion->descripcion}}"
                                 placeholder="Descripcion de calibracion">
                         </div>
                     </div>

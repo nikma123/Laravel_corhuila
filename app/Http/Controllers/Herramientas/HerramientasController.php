@@ -77,7 +77,7 @@ class HerramientasController extends Controller
         herramientas::where('id','=',$id)->update($agrearHerramienta);
 
         $herramientas=herramientas::findOrFail($id);
-        return view('Herramientas.ver');
+        return view('Herramientas.edit', compact('herramientas'));
     }
 
     /**
