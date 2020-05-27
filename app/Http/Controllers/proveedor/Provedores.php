@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\proveedor;
 
 use App\Http\Controllers\Controller;
-
+use App\Proveedor\Proveedor;
 use Illuminate\Http\Request;
 
 class Provedores extends Controller
